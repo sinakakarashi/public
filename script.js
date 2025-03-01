@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+function playGame(userChoice) {
     const choices = ["سنگ", "کاغذ", "قیچی"];
-    
+
     function getComputerChoice() {
         return choices[Math.floor(Math.random() * choices.length)];
     }
@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function playGame(userChoice) {
-        const computerChoice = getComputerChoice();
-        const result = determineWinner(userChoice, computerChoice);
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(userChoice, computerChoice);
 
-        document.getElementById("result").innerText = 
-            `شما انتخاب کردید: ${userChoice}\nکامپیوتر انتخاب کرد: ${computerChoice}\nنتیجه: ${result}`;
-    }
+    document.getElementById("result").innerText = 
+        `شما انتخاب کردید: ${userChoice}\nکامپیوتر انتخاب کرد: ${computerChoice}\nنتیجه: ${result}`;
+}
 
+document.addEventListener("DOMContentLoaded", () => {
     const buttonsContainer = document.createElement("div");
     buttonsContainer.innerHTML = `
         <h2>بازی سنگ، کاغذ، قیچی</h2>
