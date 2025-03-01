@@ -14,9 +14,9 @@ function playGame(userChoice) {
             (userChoice === "قیچی" && computerChoice === "کاغذ") ||
             (userChoice === "کاغذ" && computerChoice === "سنگ")
         ) {
-            return "تبریک! شما بردید 🎉";
+            return "شانسی بود! شما بردی 😒";
         } else {
-            return "باختی! کامپیوتر برد 😢";
+            return "نچ تر زدی! کامپیوتر برد🍆";
         }
     }
 
