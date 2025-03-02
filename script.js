@@ -38,3 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(buttonsContainer);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // بررسی حالت ذخیره شده در Local Storage
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    // کلیک روی دکمه تغییر تم
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        // ذخیره‌ی وضعیت در Local Storage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
