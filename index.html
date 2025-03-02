@@ -3,7 +3,52 @@
 <head>
      <meta charset="UTF-8>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>My Website</title>
+     <title>My Website</title> 
+     <style>
+        body {
+            background: linear-gradient(-45deg, #ff416c, #ff4b2b, #ffcc00, #ff6a00);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ffcc00;
+            color: black;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Hello i am Hero sina Welcome to My website</h1>
