@@ -28,10 +28,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
 </head>
-     <meta charset="UTF-8>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>My Website</title> 
      <style>
+       
+      form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
         body {
             background: linear-gradient(-45deg, #ff416c, #ff4b2b, #ffcc00, #ff6a00);
             background-size: 400% 400%;
@@ -78,6 +111,18 @@
     </style>
 </head>
 <body>
+  <h2>فرم ارتباطی</h2>
+<form id="contactForm">
+    <label for="name">نام:</label>
+    <input type="text" id="name" required>
+
+    <label for="message">پیام:</label>
+    <textarea id="message" required></textarea>
+
+    <button type="submit">ارسال</button>
+</form>
+
+<p id="responseMessage"></p>
     <button id="theme-toggle">تغییر تم</button>
     <h1>Hello i am Hero sina Welcome to My website</h1>
     <p>This is my first GitHub pages site!</p>
